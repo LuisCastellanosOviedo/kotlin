@@ -8,9 +8,22 @@ fun main(args: Array<String>) {
     val shorts = listOf<Short> (20,30,40)
 
     append(StringBuilder("String1"),StringBuilder("String2"))
+
+    val strings = listOf("tpm","tmp2")
+
+    if(strings is List<String>){
+        println("type list of string it works on kotlin not java ")
+    }
 }
 
 fun <T> convertToInt(collection:List<T>){
+    for (num in collection    ){
+       // error println("${num.toInt()}")
+    }
+}
+
+//error will throw if listf<Int?>
+fun <T:Any> convertToIntNotull(collection:List<T>){
     for (num in collection    ){
        // error println("${num.toInt()}")
     }
